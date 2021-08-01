@@ -1,0 +1,7 @@
+{
+  "name": "leptocare",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
