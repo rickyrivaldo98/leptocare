@@ -22,11 +22,15 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import Pertanyaan1 from './pages/Pertanyaan1';
+import Pertanyaan2 from './pages/Pertanyaan2';
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
+        <Route exact path="/pertanyaan2">
+          <Pertanyaan2/>
+        </Route>
         <Route exact path="/pertanyaan1">
           <Pertanyaan1/>
         </Route>
