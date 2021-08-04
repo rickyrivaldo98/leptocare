@@ -1,7 +1,17 @@
-import { IonButton, IonContent, IonInput, IonItem, IonLabel, IonPage } from "@ionic/react"
+import { IonButton, IonPage } from "@ionic/react"
 import { Link } from "react-router-dom";
 import Mask from "../assets/img/Mask.svg"
-const Pertanyaan1: React.FC = () => {
+import React, { useState } from "react";
+
+interface Data {
+    pertanyaan1: string
+  }
+interface props {
+    pertanyaan1:string
+    setForm:React.Dispatch<React.SetStateAction<Data>>
+}
+const Pertanyaan1: React.FC<props> = ({pertanyaan1, setForm}) => {
+    
     return ( 
         <>
         <IonPage className="relative">
@@ -10,7 +20,7 @@ const Pertanyaan1: React.FC = () => {
                         <Link className="w-1/3 text-black text-xs text-left font-bold" to="/home">
                             <div>Kembali</div>
                         </Link>
-                        <div className="w-1/3 text-black text-xs"><b>1</b> dari 10</div>
+                        <div className="w-1/3 text-black text-xs"><b>1</b> dari 11</div>
                         <div className="w-1/3"></div>
                     </div>
                     <div className="flex pt-12">
@@ -25,7 +35,7 @@ const Pertanyaan1: React.FC = () => {
                 </div>
                 <div className="bg-white h-2/3 px-4">
                     <div className="pt-5">
-                        <input type="text" placeholder="Tulis Nama Anda Disini" className="mt-1 py-4 focus:ring-indigo-500 focus:border-indigo-500 block w-full text-base shadow-sm border-gray-300 rounded-md"/>
+                        <input onChange={(e)=>setForm({pertanyaan1:e.target.value})} value={pertanyaan1} type="text" name="name" placeholder="Silahkan Mengisi Nama Anda Disini" className="mt-1 py-4 focus:ring-indigo-500 focus:border-indigo-500 block w-full text-base shadow-sm border-gray-300 rounded-md"/>
                     </div>
                     <IonButton className="mb-2 absolute bottom-10 left-1/2 transform -translate-x-1/2" size="large" routerLink="/pertanyaan2"><div className="px-16 text-2xl">Selanjutnya</div></IonButton>
                 </div>

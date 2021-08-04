@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Mask from "../assets/img/Mask.svg"
 
-const Pertanyaan2: React.FC = () => {
+const Pertanyaan4: React.FC = () => {
 
 
 const [active, setActive] = useState(0)
@@ -18,17 +18,17 @@ console.log(nilai)
     return ( 
         <>
         <IonPage className="relative">
-                <div className="bg-blue-400 h-1/3 text-center px-4">
+                <div className="bg-gray-400 h-1/3 text-center px-4">
                     <div className="flex pt-5">
-                        <Link className="w-1/3 text-black text-xs text-left font-bold" to="/pertanyaan1">
+                        <Link className="w-1/3 text-black text-xs text-left font-bold" to="/pertanyaan3">
                             <div>Kembali</div>
                         </Link>
-                        <div className="w-1/3 text-black text-xs"><b>2</b> dari 11</div>
+                        <div className="w-1/3 text-black text-xs"><b>4</b> dari 11</div>
                         <div className="w-1/3"></div>
                     </div>
                     <div className="flex pt-12">
                         <div className="w-4/6">
-                            <div className="text-left text-xl font-bold">Apakah Anda Merasakan Sakit Kepala Mendadak??</div>
+                            <div className="text-left text-xl font-bold">Apakah Anda Mengalami Demam?</div>
                             <div className="text-left text-xs font-light pt-3">Silahkan isi pertanyaan dengan memilih <br/> Salah Satu Jawaban</div>
                         </div>
                         <div className="w-2/6">
@@ -55,11 +55,11 @@ console.log(nilai)
                             </div>
                         </div>
                     </div>
-                    <IonButton routerLink="/pertanyaan3" className="mb-2 absolute bottom-10 left-1/2 transform -translate-x-1/2" size="large"><div className="px-16 text-2xl">Selanjutnya</div></IonButton>
+                    <IonButton routerLink="/pertanyaan5" className="mb-2 absolute bottom-10 left-1/2 transform -translate-x-1/2" size="large"><div className="px-16 text-2xl">Selanjutnya</div></IonButton>
                 </div>
         </IonPage>
         </>
      );
 }
  
-export default Pertanyaan2;
+export default Pertanyaan4;
